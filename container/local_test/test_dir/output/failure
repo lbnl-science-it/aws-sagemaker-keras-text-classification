@@ -1,0 +1,5 @@
+Exception during training: [Errno 2] No such file or directory: '/opt/ml/input/data/training/glove.6B.100d.txt'
+Traceback (most recent call last):
+  File "/opt/program/train", line 114, in train
+    f = open(os.path.join(training_path, 'glove.6B.100d.txt'))
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/ml/input/data/training/glove.6B.100d.txt'
