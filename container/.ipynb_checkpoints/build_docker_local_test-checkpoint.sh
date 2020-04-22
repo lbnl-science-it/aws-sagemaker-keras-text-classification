@@ -1,6 +1,16 @@
 #!/bin/sh
+####################################################
+########## Download and unzip the dataset ##########
+####################################################
+cd ../data/
+wget https://danilop.s3-eu-west-1.amazonaws.com/reInvent-Workshop-Data-Backup.zip && unzip reInvent-Workshop-Data-Backup.zip
+mv reInvent-Workshop-Data-Backup/* ./
+rm -rf reInvent-Workshop-Data-Backup reInvent-Workshop-Data-Backup.zip
+cd ../container/
 
-# The name of our algorithm
+#################################################
+######### Buildi the SageMaker Container ########
+#################################################
 algorithm_name=sagemaker-keras-text-classification
 
 chmod +x sagemaker_keras_text_classification/train
@@ -38,7 +48,17 @@ fi
 
 docker build  -t ${algorithm_name} .
 docker tag ${algorithm_name} ${fullname}
+
+################################
+########## Local Test ########## 
+################################
+cd ../data
+cp -a . ../container/local_test/test_dir/input/data/training/
+cd ../container
 cd local_test
+### Train
 ./train_local.sh ${fullname}
+### Prediction
 ./serve_local.sh ${fullname}
+
 
