@@ -2,8 +2,6 @@
 
 A modified version of this AWS SageMaker lab guide: https://github.com/aws-samples/amazon-sagemaker-keras-text-classification
 
-* ### [Training and Hosting your Algorithm in Amazon SageMaker](./sagemaker_keras_text_classification.ipynb)
-
 * ### Local Test:
   1. Open a terminal:
   ```shell
@@ -15,5 +13,7 @@ A modified version of this AWS SageMaker lab guide: https://github.com/aws-sampl
   cd container/local_test
   ./predict.sh input.json application/json
   ```
-  
+
+* ### [Training and Hosting your Algorithm in Amazon SageMaker](./sagemaker_keras_text_classification.ipynb) 
+ 
 * ### [Endpoint Test](./endpoint_test.ipynb)
