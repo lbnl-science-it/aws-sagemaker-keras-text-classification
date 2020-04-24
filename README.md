@@ -17,3 +17,6 @@ A modified version of this AWS SageMaker lab guide: https://github.com/aws-sampl
 * ### [Training and Hosting your Algorithm in Amazon SageMaker](./sagemaker_keras_text_classification.ipynb) 
  
 * ### [Endpoint Test](./endpoint_test.ipynb)
+
+## Citations
+https://github.com/aws-samples/amazon-sagemaker-keras-text-classification
